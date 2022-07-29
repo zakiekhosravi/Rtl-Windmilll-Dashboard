@@ -23,7 +23,7 @@
     <script src="./assets/js/charts-lines.js" defer></script>
     <script src="./assets/js/charts-pie.js" defer></script>
   </head>
-  <body>
+  <body class="font-body">
     <div
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
       :class="{ 'overflow-hidden': isSideMenuOpen }"
@@ -595,7 +595,7 @@
               </svg>
             </button>
             <!-- Search input -->
-            <div class="flex justify-center flex-1 lg:ml-32">
+            <div class="flex justify-between flex-1 lg:-mr-10">
               <div
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
@@ -631,7 +631,7 @@
                 >
                   <template x-if="!dark">
                     <svg
-                      class="w-5 h-5"
+                      class="w-5 h-5 ml-6"
                       aria-hidden="true"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -643,7 +643,7 @@
                   </template>
                   <template x-if="dark">
                     <svg
-                      class="w-5 h-5"
+                      class="w-5 h-5 ml-6"
                       aria-hidden="true"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -679,7 +679,7 @@
                   <!-- Notification badge -->
                   <span
                     aria-hidden="true"
-                    class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
+                    class="absolute top-0 left-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
                   ></span>
                 </button>
                 <template x-if="isNotificationsMenuOpen">
@@ -689,7 +689,7 @@
                     x-transition:leave-end="opacity-0"
                     @click.away="closeNotificationsMenu"
                     @keydown.escape="closeNotificationsMenu"
-                    class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
+                    class="absolute left-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
                   >
                     <li class="flex">
                       <a
@@ -751,7 +751,7 @@
                     x-transition:leave-end="opacity-0"
                     @click.away="closeProfileMenu"
                     @keydown.escape="closeProfileMenu"
-                    class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
+                    class="absolute left-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
                     aria-label="submenu"
                   >
                     <li class="flex">
@@ -760,7 +760,7 @@
                         href="#"
                       >
                         <svg
-                          class="w-4 h-4 mr-3"
+                          class="w-4 h-4 ml-3"
                           aria-hidden="true"
                           fill="none"
                           stroke-linecap="round"
@@ -1357,7 +1357,7 @@
                 class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
               >
                 <span class="flex items-center col-span-3">
-                  Showing 21-30 of 100
+                  نمایش 30-21 از 100
                 </span>
                 <span class="col-span-2"></span>
                 <!-- Pagination -->
@@ -1456,14 +1456,14 @@
             <h2
               class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
             >
-              Charts
+              نمودارها
             </h2>
             <div class="grid gap-6 mb-8 md:grid-cols-2">
               <div
                 class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
               >
                 <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Revenue
+                  درآمد
                 </h4>
                 <canvas id="pie"></canvas>
                 <div
@@ -1472,21 +1472,21 @@
                   <!-- Chart legend -->
                   <div class="flex items-center">
                     <span
-                      class="inline-block w-3 h-3 mr-1 bg-blue-500 rounded-full"
+                      class="inline-block w-3 h-3 ml-1  bg-blue-500 rounded-full"
                     ></span>
-                    <span>Shirts</span>
+                    <span>پیراهن</span>
                   </div>
                   <div class="flex items-center">
                     <span
-                      class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
+                      class="inline-block w-3 h-3 ml-1 bg-teal-600 rounded-full"
                     ></span>
-                    <span>Shoes</span>
+                    <span>کفش</span>
                   </div>
                   <div class="flex items-center">
                     <span
-                      class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
+                      class="inline-block w-3 h-3 ml-1 bg-purple-600 rounded-full"
                     ></span>
-                    <span>Bags</span>
+                    <span>کیف </span>
                   </div>
                 </div>
               </div>
@@ -1494,7 +1494,7 @@
                 class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
               >
                 <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Traffic
+                  ترافیک
                 </h4>
                 <canvas id="line"></canvas>
                 <div
@@ -1505,13 +1505,13 @@
                     <span
                       class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
                     ></span>
-                    <span>Organic</span>
+                    <span>ارگانیک</span>
                   </div>
                   <div class="flex items-center">
                     <span
                       class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
                     ></span>
-                    <span>Paid</span>
+                    <span>پرداخت شده</span>
                   </div>
                 </div>
               </div>

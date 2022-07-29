@@ -15,6 +15,11 @@ module.exports = {
         },
       },
     }),
+    fontFamily: {
+      body: ['Bakh'],
+      display:['Bakh'],
+     },
+    extend: {},
     colors: {
       transparent: 'transparent',
       white: '#ffffff',
@@ -164,9 +169,6 @@ module.exports = {
       maxHeight: {
         '0': '0',
         xl: '36rem',
-      },
-      fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Bakh";
-    font-style: normal;
-    font-weight: normal;
-    src: url('../../assets/fonts/bakh_Medium.woff');
+  font-family: "Bakh";
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../../public/assets/fonts/bakh_Medium.woff');
+};
+@layer base{
+@font-face {
+  font-family: "Bakh";
+  src: url(../../../public/assets/fonts/bakh_Medium.woff) ;
 }
-@tailwind utilities;
-
-@layer base {
-    html {
-      font-family: "Bakh" ,system-ui, sans-serif;
-    }
-  };
+};
